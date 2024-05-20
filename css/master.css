@@ -1,0 +1,206 @@
+* {
+   box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: cairo;
+}
+.container-header{
+   width: 1170px;
+   margin: auto;
+   padding-top: 20px;
+ }
+
+.container-header h1 {
+  font-weight: 400;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+ }
+
+.container-header h1::before {
+  content: "";
+  background-color: black;
+  height: 2px;
+  position: absolute;
+  width: 100px;
+  bottom: -25px ;
+  left: calc(( 1170px / 2 ) - 50px);
+}
+
+.container-header h1::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid black;
+  bottom: -33px;
+  left: calc(( 1170px / 2 ) - 8.5px);
+  background-color: white;
+}
+
+.container-header p {
+  margin-top: 70px;
+  width: 500px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 2;
+  color: #777;
+ }
+
+.parent .container {
+  width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  margin-top: 50px;
+  column-gap: 20px;
+  row-gap: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.parent .container .box {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 30px;
+
+}
+
+.parent .container h3 {
+  color: #19c8fa;
+  margin-top: 0;
+  margin-bottom: 20px;
+  
+}
+.parent .container p {
+  color: #777;
+  line-height: 2;
+  width: 450px;
+}
+
+.potfolio .container ul {
+  margin-top: 50px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.potfolio .container li {
+  padding: 10px 20px;
+
+}
+
+.potfolio .container .images {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.potfolio .container .images div {
+  flex-basis: 25%;
+  position: relative;
+  overflow: hidden;
+}
+.potfolio .container .images div img {
+  max-width: 100%;
+  z-index: 2;
+}
+
+.potfolio .container .images div .caption {
+  position: absolute;
+  bottom: -100%;
+  background-color: white;
+  width: 100%;
+  left: 0;
+  padding: 20px;
+  transition: 0.3s;
+}
+.potfolio .container .images div .caption h1 {
+  margin: 0 0 10px 0;
+}
+.potfolio .container .images div:hover .caption {
+  bottom: 0;
+}
+
+.video {
+  margin-top: 50px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+video {
+  width: 100%;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 40%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.info {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: 0;
+  height: 200px;
+  width: 100%;
+  background-color:#014457;
+  z-index: 4;
+}
+.info h2 {
+  color: white;
+  text-align: center;
+  margin: 30px 0 ;
+  font-weight: 400;
+}
+.info p {
+  color: white;
+  text-align: center;
+}
+.info span {
+  display: block;
+  text-align: center;
+  color: white;
+  padding: 10px 20px;
+  background-color: black;
+  text-align: center;
+  margin: 30px auto 0 auto;
+  width: 150px;
+}
+
+.skills-testimonials .container {
+  width: 1170px;
+  margin: auto;
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: repeat(2, auto);
+}
+
+.skills-testimonials .container .skills {
+  grid-template-columns: auto;
+}
+
+
+.skills-testimonials .container .skills .boxes {
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: auto;
+  row-gap: 50px;
+}
+.skills-testimonials .container .skills .boxes .box {
+  display: grid;
+  column-gap: 40px;
+  grid-template-columns: repeat(2 , auto);
+}
+.skills-testimonials .container .skills .boxes .box img {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+}
+.skills-testimonials .container .skills .boxes .box .info-box {
+  width: 500px;
+}
